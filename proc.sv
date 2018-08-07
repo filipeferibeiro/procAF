@@ -4,12 +4,6 @@ module proc(Clock, DIN, Run, Resetn, Bus, Done);
 	output logic Done;
 	output logic [8:0] Bus;
 	
-	//logic [8:0] R [10:0]; Ra = 8 Rg = 9 iR = 10 
-	/* Os R sao registradores e os regn tambem sao outros registradores, estamos criando dois conjuntos diferentes de registradores
-		Henrique explicou que precisariamos escolher entre um e outro, aconselhou usar o regn devido a logica do modulo, caso
-		a gente fosse usar o R teriamos que fazer as instruçoes do modulo regn dentro da maquina de estados.
-	*/
-	
 	logic [8:0] RA, RG, IR, R0, R1, R2, R3, R4, R5, R6, R7;
 	logic [10:0] Rin; //Rain = 8 //Rgin = 9 //iRin = 10 
 	logic [9:0] Rout;
